@@ -1,0 +1,27 @@
+{
+  "builders": [
+    {
+      "flavor": "c1.large",
+      "floating_ip_pool": "Public",
+      "image_name": "packer-test-image",
+      "security_groups": [
+        "default"
+      ],
+      "source_image": "d0a89aa8-9644-408d-a023-4dcc1148ca01",
+      "ssh_username": "cloud",
+      "type": "openstack"
+    }
+  ],
+  "post-processors": [],
+  "provisioners": [
+    {
+      "inline": [
+        "sleep 30",
+        "sudo apt-get update",
+        "sudo apt-get install -y nginx"
+      ],
+      "type": "shell"
+    }
+  ]
+}
+

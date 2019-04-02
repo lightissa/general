@@ -1,0 +1,16 @@
+{
+  "builders":
+  [
+    {
+      "type": "qemu",
+      "iso_url": "http://archive.ubuntu.com/ubuntu/dists/artful/main/installer-amd64/current/images/netboot/mini.iso",
+      "iso_checksum": "8006b73636a3df5d4f3aa3fdfa9b02cc",
+      "iso_checksum_type": "md5",
+      "ssh_username": "root",
+      "output_directory": "Ubuntu",
+      "vm_name": "Ubuntu.17.10",
+      "net_device": "virtio-net",
+      "disk_interface": "virtio"
+    }
+  ]
+}
